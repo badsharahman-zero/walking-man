@@ -1,0 +1,44 @@
+body,
+html{
+    margin: 0;
+    background: #000;
+}
+
+.sky{
+    background: url('sky.png') repeat-x;
+    animation: movebg 9s linear infinite;
+    height: 158px;
+}
+.background{
+    background: url('background.png') repeat-x;
+    position:relative;
+    top: 124px;
+    animation: movebg 6s linear infinite;
+    box-shadow:10px 10px 40px RGBA(0,0,0, 0.85) inset;
+}
+.man{
+    width:106px;
+    height:200px;
+    margin: auto;
+    background: url('man-1.png') repeat-x;
+    animation: walk .8s steps(6) infinite;
+    position:relative;
+    bottom:34px;
+}
+@keyframes walk {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -624px;
+    }
+    
+}
+@keyframes movebg {
+    0%{
+        background-position: 550px;
+    }
+    100%{
+        background-position: 0;
+    }
+}
